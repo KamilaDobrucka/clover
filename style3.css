@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding-top: 120px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -215,6 +215,7 @@ section#banner2 {
     line-height: 46pt;
     color:white;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .sentence2 {
@@ -222,6 +223,8 @@ section#banner2 {
     line-height: 46pt;
     color:white;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
 }
 
 .sentence3 {
@@ -229,8 +232,9 @@ section#banner2 {
     line-height: 46pt;
     color:white;
     text-align: center;
-}
+    margin-top: 5px;
 
+}
 .know {
     font-size: 24pt;
     line-height: 70pt;
@@ -268,16 +272,42 @@ section#banner2 {
     font-size: 48pt; 
 }
 
+.text-center a:link {
+    color:white;
+    font-size: 48pt;
+    text-decoration: none;
+}
+
+.text-center a:active {
+    color:white;
+    font-size: 48pt;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    color:white;
+    font-size: 48pt;
+    text-decoration: none;
+}
+
+.text-center a:visited {
+    color:white;
+    font-size: 48pt;
+    text-decoration: none;
+}
+
+
 .skills-container {
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center; 
 }
 
 .skill {
     height: 300px;
-    width: 480px;     
+    width: 480px; 
+    width: 33.33%;    
 }
 
 .skill p {
@@ -285,11 +315,11 @@ section#banner2 {
 }
 
 .skill:nth-child(odd) {
-    background-color:rgb(224, 220, 220);
+    background-color:rgb(232, 231, 236);
 }
 
 .skill:nth-child(even) {
-    background-color:rgb(248, 242, 242);
+    background-color:rgb(255, 250, 250);
 }
 
 .contact-container {
