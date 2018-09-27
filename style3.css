@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 120px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.photo {
+    height: 80px;    
+
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+header ul li a {
+    color: black;
+    font-size: 18pt;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: inline-block;
+    text-decoration: none;   
+}
+
+header ul li .submenu {
+    width: 70px;
+    height: 100px;
+    width: 100%;
+    flex-direction: column;
+    background-color:black;
+    align-items:center;   
+    position: absolute;
+    /* margin-left: 40px; */
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity:0;
+    transition: all 1s ease;
+}
+
+header ul li:hover .submenu {
+    display:flex;
+    opacity:1;
+}
+
+.submenu li a {
+    color:white;
+    line-height: auto;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 14pt;  
+}
+
+.submenu::before {
+    content:"";
+    display:inline-block;
+    height: 1px;
+    width: 70px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: -2px;
+    
+}
+
+/* klasa robocza do utrzymywania odpowiedniej szerokości */
+.container {
+    padding: 0 15px;
+    max-width: 1440px;
+    margin: 0 120px;
+}
+
+section#banner {
+    height: 555px;
+    background-image: url('zdjecia/baner.jpg');
+    background-size: cover;
+    /* oprócz cover jest jeszcze contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+section#banner::after,
+section#banner::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 15px;
+    background-color:#000;
+    display: block;
+}
+
+section#banner::after {
+    bottom: 0;
+    left: 0;
+}
+
+section#banner::before {
+    top: 0;
+    right: 0;
+}
+
+#about {
+    justify-content: center;
+}
+
+.tekst {
+    font-size: 24pt;
+    line-height: 46pt;
+}
+
+section {
+    padding: 135px 0 100px;
+}
+#skills {
+    padding: 135px 0 0;
+}
+
+section h1 {
+    font-size: 90pt;
+    line-height: 90pt;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+section h2 {
+    font-size: 48pt;
+    line-height: 48pt;
+    font-weight: 900;
+    text-transform: lowercase;
+}
+
+section h1::after,
+section h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 80px;
+    background-color: black;
+    margin: 80px 0 100px;
+}
+
+section.inverted {
+    background-color:black;   
+}
+
+section.inverted h1,
+section.inverted h2 {
+    color:white;
+}
+
+section.inverted h1::after,
+section.inverted h2::after {
+    background-color: white;
+}
+
+section p {
+    font-size: 24pt;
+    line-height: 46pt;
+    text-transform: lowercase;  
+}
+
+section#banner2 {
+    height: 405px;
+    background-image: url('zdjecia/cytat.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zdanie {
+    position: absolute;
+    
+}
+.sentence {
+    font-size: 36pt;
+    line-height: 46pt;
+    color:white;
+    text-align: center;
+}
+
+.sentence2 {
+    font-size: 24pt;
+    line-height: 46pt;
+    color:white;
+    text-align: center;
+}
+
+.sentence3 {
+    font-size: 18pt;
+    line-height: 46pt;
+    color:white;
+    text-align: center;
+}
+
+.know {
+    font-size: 24pt;
+    line-height: 70pt;
+    color:black;
+    text-align: left;
+
+}
+
+.pics-container { 
+    display:flex;
+    justify-content: space-between;
+}
+
+.pic-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+}
+
+
+.pic {
+    width: 370px;
+    height: 270px;
+    border-radius: 20px;
+}
+.pic:hover {
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out;
+}
+
+.text-center {
+    position: absolute;
+    color:white;
+    font-size: 48pt; 
+}
+
+.skills-container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+
+.skill {
+    height: 300px;
+    width: 480px;     
+}
+
+.skill p {
+    font-size: 24pt;  
+}
+
+.skill:nth-child(odd) {
+    background-color:rgb(224, 220, 220);
+}
+
+.skill:nth-child(even) {
+    background-color:rgb(248, 242, 242);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.concon {
+    color: white;
+    font-size: 24pt;
+    margin-bottom: 100px;
+}
+
+.logo1, .logo2, .logo3 {
+    height: 50px;
+    width: 50px;
+    margin:5px;
+}
+
